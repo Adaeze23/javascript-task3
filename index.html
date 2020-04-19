@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Lesson 3</title>
+</head>
+<body>
+	<div>
+		<h2>JS TASK 3</h2>
+	</div>
+
+
+	<script type="text/javascript">
+		// write a function
+		function number_scan(numbers) {
+
+			var number_results = []
+
+			// checks for range
+			 var number = 0;
+			 for (var i = 0; i < numbers; i++) {
+			 	number++;
+				
+			 	if((number % 2) == 0 && (number % 3) !== 0 && (number % 5) !== 0){
+				number_results.push('yu');
+				
+				}else if((number % 3) == 0 && (number % 2) !== 0 && (number % 5) !== 0){
+			 		number_results.push('gi');
+				
+			 	}else if((number % 5) == 0 && (number % 3) !== 0 && (number % 2) !== 0){
+			 		number_results.push('oh');
+
+			 	}else if((number % 2) == 0 && (number % 3) == 0 && (number % 5) !== 0) {
+			 		number_results.push('yu-gi');
+
+			 	}else if((number % 2) == 0 && (number % 5) == 0 && (number % 3) !== 0) {
+			 		number_results.push('yu-oh');
+				
+			 	}else if((number % 2) == 0 && (number % 3) == 0 && (number % 5) == 0) {
+			 		number_results.push('yu-gi-oh');
+			 	}else{
+			 		number_results.push(number);
+			 	}
+			 }
+
+			
+			console.log(number_results);
+		}
+	</script>
+</body>
+</html>
